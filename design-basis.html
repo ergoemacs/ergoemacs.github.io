@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Design Basis</title>
+    <link rel="stylesheet" type="text/less" href="./style/less/o-blog.less"/>
+    <link rel="stylesheet" type="text/css" href="./style/keys.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="generator" content="o-blog version 1.2-137-gea23db7"/>
+    <link rel="stylesheet" href="./style/keys.css" type="text/css" />
+    <script src="./style/js/less-1.3.0.min.js" type="text/javascript"></script>
+    <script src="./style/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="./style/bootstrap/js/bootstrap-modal.js" type="text/javascript"></script>
+    <script src="./style/bootstrap/js/bootstrap-transition.js" type="text/javascript"></script>
+    <script src="./style/bootstrap/js/bootstrap-dropdown.js" type="text/javascript"></script>
+    <script src="./style/bootstrap/js/bootstrap-collapse.js" type="text/javascript"></script>
+
+    <script src="./style/js/prettify.js" type="text/javascript"></script>
+    <script src="./style/js/o-blog.linenumber.js" type="text/javascript"></script>
+    <script src="./style/js/o-blog-fix.js" type="text/javascript"></script>
+    
+    
+  </head>
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+	<div class="container">
+	  <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+	  <a class="brand" href="./index.html">ergoemacs-mode</a>
+	  <div class="nav-collapse collapse">
+	    <ul>
+<li><a href="./features.html"><i>icon-cog icon-white</i> Features</a>
+
+</li>
+<li><a href="#"><i>icon-book icon-white</i> Documentation</a>
+<ul>
+<li><a href="./key-setup.html">Included Key Themes and Keyboard Layouts</a>
+</li>
+<li><a href="./cua-conflict.html">Preserving Emacs Commands while maintaining familiar shortcuts</a>
+</li>
+<li>
+</li>
+<li><a href="./key-themes.html">Key Themes</a>
+</li>
+<li><a href="./keyboard-layouts.html">Keyboard Layouts</a> 
+</li>
+<li><a href="./minor-modes.html">Changes to Modes</a>
+</li>
+<li>
+</li>
+<li><a href="design-basis.html">Design Basis</a>
+</li>
+<li>
+</li>
+<li><a href="./faq.html">FAQ</a>
+</li>
+<li>
+</li>
+<li><a href="./bug-report.html">Bug report</a>
+
+</li>
+</ul>
+
+</li>
+<li><a href="#"><i>icon-file icon-white</i> Tips</a>
+<ul>
+<li><a href="./gradual-adoption.html">Gradual Adoption</a>
+</li>
+<li><a href="./system-wide.html">System Wide Keys</a>
+</li>
+<li><a href="./customize-keys.html">Customizing your keys</a>
+</li>
+<li>
+</li>
+<li><a href="./aliases.html">Making Commands Easier to Type</a>
+</li>
+<li><a href="./smart-commands.html">Smart Commands</a>
+
+</li>
+</ul>
+
+</li>
+<li><a href="./testimonials.html"><i>icon-comments-alt icon-white</i> Testimonials</a>
+
+</li>
+<li><a href="./changelog.html"><i>icon-pencil icon-white</i> Changelog</a>
+
+</li>
+<li><a href="./roadmap.html"><i>icon-tasks icon-white</i> Roadmap</a>
+</li>
+</ul>
+
+
+
+	  </div>
+	</div>
+      </div>
+    </div>
+    <div class="subnav subnav-fixed visible-desktop">
+      <div class="container">
+	<ul class="breadcrumb">
+  <li><a href="./index.html">Home</a> <span class="divider">/</span></li>
+  <li>Design Basis</li>
+  </ul>
+
+      </div>
+    </div>
+    <div id="page" class="container">
+
+<article>
+  <div class="article-content">
+    <p>
+Here's the outline of how this design is arrived.
+</p>
+<p>
+Statistics of emacs commands are compiled from emacs users, and are
+listed by frequency of use. The top about 30 ones, are given a
+keyboard shortcut.
+</p>
+<p>
+To assign the key position, the following rules are used. The rules
+are listed roughly in order of priority:
+</p><ol>
+<li>Home row keys are the best.
+</li>
+<li>2nd and 3rd fingers (pointing finger and index finger) are better
+   than 4th (ring finger) and 5th finger (pinky).
+</li>
+<li>The row above home row is considered better than the row below home
+   row for 2nd and 3rd fingers. (for 5th finger the row below is
+   considered better.)
+</li>
+<li>Right hand's keys are considered better than left hand's keys. (because most people are right handed)
+</li>
+<li><kbd class="dark">Alt</kbd> is considered better
+   than <kbd class="dark">Ctrl</kbd>. (<kbd
+   class="dark">Alt</kbd> 
+   is a natural thumb curl, <kbd class="dark">Ctrl</kbd> is
+   stretched pinky. Thumb is most powerful finger, pinkie the weakest)
+</li>
+<li>In general, cursor moving commands are placed all for the right
+   hand, while text changing commands are all placed for the left
+   hand. (grouping advantage)
+</li>
+<li>Similar commands should be grouped together to avoid
+   scattering. For example, cursor moving by single char is together
+   (<kbd class="dark">I</kbd> <kbd class="dark">J</kbd> <kbd class="dark">K</kbd> <kbd class="dark">L</kbd>). Undo, Cut, Copy, Paste are together (<kbd class="dark">Z</kbd> <kbd class="dark">X</kbd> <kbd class="dark">C</kbd> <kbd class="dark">V</kbd>). Delete
+   char/word left/right are together (<kbd class="dark">E</kbd> <kbd class="dark">R</kbd> <kbd class="dark">D</kbd> <kbd class="dark">F</kbd>).
+</li>
+<li>Commands with logical reversal or extension are done with <kbd class="dark">⇧ Shift</kbd>
+   key, after other priorities are considered. Examples: Undo/Redo,
+   move cursor to previous/next pane, find replace by string/regex,
+   isearch forward/backward, move cursor by beginning/ending of
+   line. Delete line to the right/left.
+</li>
+</ol>
+
+
+<p>
+The design is based on finger positions, not on first letter of
+command names. The shortcut set is the same for QWERTY and Dvorak. The
+ease of remembering what commands are on what keys are based on
+grouping and positioning. For example, cursor movings are all right
+hand, text changing are all left hand, moving or deleting to the
+left/right have keys that are place left and right together, and
+similar for up/down (by screen or to beginning/end of file). Undo,
+Cut, Copy, Paste are the familiar row <kbd class="dark">Z</kbd> <kbd class="dark">X</kbd> <kbd class="dark">C</kbd> <kbd class="dark">V</kbd>.
+</p>
+<p>
+In this design, only the <kbd class="dark">Alt</kbd>+<kbd class="dark">‹key›</kbd> space is used. Some <kbd class="dark">Alt</kbd>+<kbd class="dark">⇧ Shift</kbd>
+is used too. <kbd class="dark">Ctrl</kbd>+<kbd class="dark">‹key›</kbd> space is not used except 7 standard
+keybindings (Open, Close, Save, Save As, Print, Select All). The
+operation and consistency of emacs is not affected.
+</p>
+  </div>
+</article>
+      </div>
+      <div id="footer">
+	<div class="container">
+	  <div class="row">
+	    <nav class="span3">
+	      <h1>About</h1>
+	      <p>
+This page explains how ergoemacs-mode works.  It was written in emacs
+org-mode and exported to HTML using <a href="https://github.com/renard/o-blog">o-blog</a>.
+</p>
+	    </nav>
+	    <nav id="links" class="span3">
+	      <h1>Links</h1>
+	      <ul>
+		<ul>
+<li><a href="./index.html"><i>icon-home icon-white</i> Home</a>
+</li>
+</ul>
+
+
+
+<ul>
+<li><a href="./testimonials.html"><i>icon-comments-alt icon-white</i> Testimonials</a>
+
+</li>
+<li><a href="./changelog.html"><i>icon-pencil icon-white</i> Changelog</a>
+
+</li>
+<li><a href="./roadmap.html"><i>icon-tasks icon-white</i> Roadmap</a>
+</li>
+</ul>
+
+
+	      </ul>
+	    </nav>
+	    <nav id="archives" class="span3">
+	      <h1><a href="./archives.html">Archives</a></h1>
+	      <ul>
+		
+	      </ul>
+	    </nav>
+	    <nav class="tags span3">
+	      <h1><a href="./tags/index.html">Tags</a></h1>
+	      <ul>
+  
+</ul>
+
+	    </nav>
+	  </div>
+	</div>
+	<div class="copyright" style="text-align: center;">
+	  <p>
+Documentation Copyright © 2007-2013 Matthew Fidler, Xah Lee and David
+Capello. Published under the therm of the <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/fr/">Creative Commons Attribution-Noncommercial-Share Alike 2.0 France License</a>.  Code
+published under <a href="http://www.gnu.org/licenses/gpl-2.0.html">GPL v2</a>.
+</p>
+	  <p>Powered by <a href="https://github.com/renard/o-blog">o-blog</a>.</p>
+	</div>
+      </div>
+</body>
+</html>
+

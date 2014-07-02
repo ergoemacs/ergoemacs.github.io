@@ -1,0 +1,37 @@
+# date: 2010-06-15
+# version: 1.0
+# Author: Brendan Miller.
+# Description: this file makes bash's editing shortucts to be ErgoEmacs keybinding, for DV layout.
+# For layout of ErgoEmacs keys, see: http://xahlee.org/emacs/ergonomic_emacs_keybinding.html
+
+# INSTALL
+# to install, rename this file to just ".inputrc"
+# place this file in your home dir. e.g. ~/.inputrc
+# restart your terminal. Then, bash's keybinding for editing
+# should be like ErgoEmacs.
+# If no key works, try replace all \e to \M-. That's means change Esc to Meta key.
+
+# doc about how to edit the bash keybinding, see:
+# http://www.gnu.org/software/bash/manual/html_node/Readline-Init-File-Syntax.html
+
+set editing-mode emacs
+
+"\e.": backward-char
+"\ex": forward-char
+"\ej": previous-history
+"\ey": next-history
+"\eD": beginning-of-line
+"\eH": end-of-line
+"\ei": backward-word
+"\ep": forward-word
+"\eI": kill-line
+"\ee": backward-kill-word
+"\er": kill-word
+"\ed": backward-delete-char
+"\eu": delete-char
+"\e:": undo
+"\e'": kill-region
+"\eJ": copy-region-as-kill
+"\ek": yank
+"\e;": forward-search-history
+"\e:": reverse-search-history

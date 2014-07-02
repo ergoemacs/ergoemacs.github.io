@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Changes to Modes</title>
+    <link rel="stylesheet" type="text/less" href="./style/less/o-blog.less"/>
+    <link rel="stylesheet" type="text/css" href="./style/keys.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="generator" content="o-blog version 1.2-137-gea23db7"/>
+    <link rel="stylesheet" href="./style/keys.css" type="text/css" />
+    <script src="./style/js/less-1.3.0.min.js" type="text/javascript"></script>
+    <script src="./style/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="./style/bootstrap/js/bootstrap-modal.js" type="text/javascript"></script>
+    <script src="./style/bootstrap/js/bootstrap-transition.js" type="text/javascript"></script>
+    <script src="./style/bootstrap/js/bootstrap-dropdown.js" type="text/javascript"></script>
+    <script src="./style/bootstrap/js/bootstrap-collapse.js" type="text/javascript"></script>
+
+    <script src="./style/js/prettify.js" type="text/javascript"></script>
+    <script src="./style/js/o-blog.linenumber.js" type="text/javascript"></script>
+    <script src="./style/js/o-blog-fix.js" type="text/javascript"></script>
+    
+    
+  </head>
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+	<div class="container">
+	  <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+	  <a class="brand" href="./index.html">ergoemacs-mode</a>
+	  <div class="nav-collapse collapse">
+	    <ul>
+<li><a href="./features.html"><i>icon-cog icon-white</i> Features</a>
+
+</li>
+<li><a href="#"><i>icon-book icon-white</i> Documentation</a>
+<ul>
+<li><a href="./key-setup.html">Included Key Themes and Keyboard Layouts</a>
+</li>
+<li><a href="./cua-conflict.html">Preserving Emacs Commands while maintaining familiar shortcuts</a>
+</li>
+<li>
+</li>
+<li><a href="./key-themes.html">Key Themes</a>
+</li>
+<li><a href="./keyboard-layouts.html">Keyboard Layouts</a> 
+</li>
+<li><a href="./minor-modes.html">Changes to Modes</a>
+</li>
+<li>
+</li>
+<li><a href="design-basis.html">Design Basis</a>
+</li>
+<li>
+</li>
+<li><a href="./faq.html">FAQ</a>
+</li>
+<li>
+</li>
+<li><a href="./bug-report.html">Bug report</a>
+
+</li>
+</ul>
+
+</li>
+<li><a href="#"><i>icon-file icon-white</i> Tips</a>
+<ul>
+<li><a href="./gradual-adoption.html">Gradual Adoption</a>
+</li>
+<li><a href="./system-wide.html">System Wide Keys</a>
+</li>
+<li><a href="./customize-keys.html">Customizing your keys</a>
+</li>
+<li>
+</li>
+<li><a href="./aliases.html">Making Commands Easier to Type</a>
+</li>
+<li><a href="./smart-commands.html">Smart Commands</a>
+
+</li>
+</ul>
+
+</li>
+<li><a href="./testimonials.html"><i>icon-comments-alt icon-white</i> Testimonials</a>
+
+</li>
+<li><a href="./changelog.html"><i>icon-pencil icon-white</i> Changelog</a>
+
+</li>
+<li><a href="./roadmap.html"><i>icon-tasks icon-white</i> Roadmap</a>
+</li>
+</ul>
+
+
+
+	  </div>
+	</div>
+      </div>
+    </div>
+    <div class="subnav subnav-fixed visible-desktop">
+      <div class="container">
+	<ul class="breadcrumb">
+  <li><a href="./index.html">Home</a> <span class="divider">/</span></li>
+  <li>Changes to Modes</li>
+  </ul>
+
+      </div>
+    </div>
+    <div id="page" class="container">
+
+<article>
+  <div class="article-content">
+    <p>
+Most major and minor modes are setup to respect <code>ergoemacs-mode</code>
+keybindings.  There are additional changes described below
+</p>
+<div id="outline-container-1" class="outline-3">
+<h3 id="sec-1"><kbd class="dark">O</kbd>rg mode</h3>
+<div class="outline-text-3" id="text-1">
+
+<p>Ergoemacs-mode in general respects org-mode's <Kbd Class="Dark">Ctrl</Kbd>+<KBD CLASS="DARK">E</KBD>nter and <kbd class="dark">Alt</kbd>+<kbd class="dark">a</kbd>rrow
+keys.  The following exceptions are of note:
+</p>
+</div>
+
+<div id="outline-container-1-1" class="outline-4">
+<h4 id="sec-1-1"><Kbd Class="Dark">Ctrl</Kbd>+<KBD CLASS="DARK">E</KBD>nter in tables</h4>
+<div class="outline-text-4" id="text-1-1">
+
+<p>In org-mode tables <kbd class="dark">Ctrl</kbd>+<kbd class="dark">e</kbd>nter activates cua rectangle mode.  The
+paste knows what was copied, and will use cua-mode, or org-mode's
+default pasting mechanism depending on if a rectangle was copied last.
+</p></div>
+
+</div>
+
+<div id="outline-container-1-2" class="outline-4">
+<h4 id="sec-1-2"><kbd class="dark">Alt</kbd>+<kbd class="dark">a</kbd>rrow keys</h4>
+<div class="outline-text-4" id="text-1-2">
+
+<p>The <kbd class="dark">alt</kbd>+<kbd class="dark">a</kbd>rrow keys are respected based on context for org-mode.  When
+in text, you can use the ergoemacs-mode defined key, or the org-mode
+defined key by changing the value of a few variables
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup><col class="left" /><col class="left" /><col class="left" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="left">Key</th><th scope="col" class="left">Variable to Enable ergoemacs function in org-mode text</th><th scope="col" class="left">Enabled by default</th></tr>
+</thead>
+<tbody>
+<tr><td class="left">&lt;M-left&gt;</td><td class="left">ergoemacs-use-ergoemacs-metaleft</td><td class="left">yes</td></tr>
+<tr><td class="left">&lt;M-right&gt;</td><td class="left">ergoemacs-use-ergoemacs-metaright</td><td class="left">yes</td></tr>
+<tr><td class="left">&lt;M-up&gt;</td><td class="left">ergoemacs-use-ergoemacs-metaup</td><td class="left">no</td></tr>
+<tr><td class="left">&lt;M-down&gt;</td><td class="left">ergoemacs-use-ergoemacs-metadown</td><td class="left">no</td></tr>
+</tbody>
+</table>
+
+
+<p>
+The values of these variables could be changed by:
+</p>
+
+
+
+<pre class="src src-emacs-lisp">(setq ergoemacs-use-ergoemacs-metaleft nil)
+</pre>
+
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-3">
+<h3 id="sec-2"><kbd class="dark">C</kbd>ua-mode</h3>
+<div class="outline-text-3" id="text-2">
+
+<p>Cua mode is not enabled by default, but ergoemacs-mode can use some of
+its features. To enable CUA rectangles, use:
+</p>
+
+
+
+<pre class="src src-emacs-lisp">(cua-selection-mode t)
+</pre>
+
+
+<p>
+If <code>cua-mode</code> is enabled before <code>ergoemacs-mode</code> is loaded,
+<code>ergoemacs-mode</code> changes to <code>cua-selection-mode</code>. If you attempt to
+enable <code>cua-mode</code>, only <code>cua-selection-mode</code> will be enabled.
+</p>
+<p>
+CUA rectangle support is enabled by changing the Alt+
+keys to Win+ keys.
+</p>
+<p>
+If you do not know what CUA rectangles are, the following describes
+CUA rectangles and gives the keys used for ergoemacs-mode.
+</p>
+
+</div>
+
+<div id="outline-container-2-1" class="outline-4">
+<h4 id="sec-2-1"><kbd class="dark">R</kbd>ectangle support</h4>
+<div class="outline-text-4" id="text-2-1">
+
+<p>Cua-mode's rectangle select region has bound it
+Emacs's normal rectangle support is based on interpreting the region
+between the mark and point as a "virtual rectangle", and using a
+completely separate set of "rectangle commands" [C-x r &hellip;] on the
+region to copy, kill, fill a.s.o. the virtual rectangle.
+</p>
+<p>
+cua-mode's superior rectangle support uses a true visual
+representation of the selected rectangle, i.e. it highlights the
+actual part of the buffer that is currently selected as part of the
+rectangle.  Unlike emacs' traditional rectangle commands, the
+selected rectangle always as straight left and right edges, even
+when those are in the middle of a TAB character or beyond the end
+of the current line.  And it does this without actually modifying
+the buffer contents (it uses display overlays to visualize the
+virtual dimensions of the rectangle).
+</p>
+<p>
+This means that cua-mode's rectangles are not limited to the actual
+contents of the buffer, so if the cursor is currently at the end of a
+short line, you can still extend the rectangle to include more columns
+of longer lines in the same rectangle.  And you can also have the
+left edge of a rectangle start in the middle of a TAB character.
+Sounds strange? Try it!
+</p>
+<p>
+To start a rectangle, use [C-return] and extend it using the normal
+movement keys (up, down, left, right, home, end, C-home,
+C-end). Once the rectangle has the desired size, you can cut or
+copy it using C-x and C-c (or C-w and M-w), and you can
+subsequently insert it - as a rectangle - using C-v (or C-y).  So
+the only new command you need to know to work with cua-mode
+rectangles is C-return!
+</p>
+<p>
+Normally, when you paste a rectangle using C-v (C-y), each line of
+the rectangle is inserted into the existing lines in the buffer.
+If overwrite-mode is active when you paste a rectangle, it is
+inserted as normal (multi-line) text.
+</p>
+<p>
+If you prefer the traditional rectangle marking (i.e. don't want
+straight edges), [M-p] toggles this for the current rectangle,
+or you can customize cua-virtual-rectangle-edges.
+</p>
+<p>
+And there's more: If you want to extend or reduce the size of the
+rectangle in one of the other corners of the rectangle, just use
+[return] to move the cursor to the "next" corner.  Or you can use
+the [M-up], [M-down], [M-left], and [M-right] keys to move the
+entire rectangle overlay (but not the contents) in the given
+direction.
+</p>
+<p>
+[C-return] cancels the rectangle
+[C-space] activates the region bounded by the rectangle
+</p>
+<p>
+If you type a normal (self-inserting) character when the rectangle is
+active, the character is inserted on the "current side" of every line
+of the rectangle.  The "current side" is the side on which the cursor
+is currently located. If the rectangle is only 1 column wide,
+insertion will be performed to the left when the cursor is at the
+bottom of the rectangle.  So, for example, to comment out an entire
+paragraph like this one, just place the cursor on the first character
+of the first line, and enter the following:
+C-return M-} ; ; &lt;space&gt;  C-return
+</p>
+<p>
+cua-mode's rectangle support also includes all the normal rectangle
+functions with easy access:
+</p>
+<p>
+[Win+a] aligns all words at the left edge of the rectangle
+[Win+b] fills the rectangle with blanks (tabs and spaces)
+[Win+c] closes the rectangle by removing all blanks at the left edge
+of the rectangle
+[Win+f] fills the rectangle with a single character (prompt)
+[Win+i] increases the first number found on each line of the rectangle
+by the amount given by the numeric prefix argument (default 1)
+It recognizes 0x&hellip; as hexadecimal numbers
+[Win+k] kills the rectangle as normal multi-line text (for paste)
+[Win+l] downcases the rectangle
+[Win+m] copies the rectangle as normal multi-line text (for paste)
+[Win+n] fills each line of the rectangle with increasing numbers using
+a supplied format string (prompt)
+[Win+o] opens the rectangle by moving the highlighted text to the
+right of the rectangle and filling the rectangle with blanks.
+[Win+p] toggles virtual straight rectangle edges
+[Win+P] inserts tabs and spaces (padding) to make real straight edges
+[Win+q] performs text filling on the rectangle
+[Win+r] replaces REGEXP (prompt) by STRING (prompt) in rectangle
+[Win+R] reverse the lines in the rectangle
+[Win+s] fills each line of the rectangle with the same STRING (prompt)
+[Win+t] performs text fill of the rectangle with TEXT (prompt)
+[Win+u] upcases the rectangle
+[Win+|] runs shell command on rectangle
+[Win+'] restricts rectangle to lines with CHAR (prompt) at left column
+[Win+/] restricts rectangle to lines matching REGEXP (prompt)
+[C-?] Shows a brief list of the above commands.
+</p>
+<p>
+[M-C-up] and [M-C-down] scrolls the lines INSIDE the rectangle up
+and down; lines scrolled outside the top or bottom of the rectangle
+are lost, but can be recovered using [C-z].
+</p>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-3">
+<h3 id="sec-3"><kbd class="dark">D</kbd>ired-mode</h3>
+<div class="outline-text-3" id="text-3">
+
+<p>In dired-mode, [<kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd>] [<kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd>] or [Apps] [m] will toggle to
+writable dired mode (wdired-mode).  Then [<kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd>] [<kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd>] or [Apps]
+[m] will commit the changes. 
+</p></div>
+
+</div>
+
+<div id="outline-container-4" class="outline-3">
+<h3 id="sec-4"><kbd class="dark">H</kbd>elm-mode</h3>
+<div class="outline-text-3" id="text-4">
+
+<p>Helm mode's actions are in general executed with the Return key. The
+persistent actions can be executed with <Kbd Class="Dark">Alt</Kbd>+<KBD CLASS="DARK">R</KBD>eturn.  The prefix-based
+persistent actions can be execute with <Kbd Class="Dark">Alt</Kbd>+<Kbd Class="Dark">⇧ Shift</kbd>+<KBD CLASS="DARK">R</KBD>eturn.  
+</p>
+<p>
+The exception to this is when finding files.  Return will expand the
+directory within helm (equivalent to helm's execute persistent action
+for a directory). And <Kbd Class="Dark">Alt</Kbd>+<KBD CLASS="DARK">R</KBD>eturn will open dired.  This is equivalent
+to ido-mode.  In my opinion it is more likely that you want to do
+than to open in ido-mode. Therefore an unchorded key is more
+ergonomic than a key combination like <Kbd Class="Dark">Alt</Kbd>+<KBD CLASS="DARK">R</KBD>eturn.  However, you can
+turn off this behavior by changing the following setting:
+</p>
+
+
+
+<pre class="src src-emacs-lisp">(setq ergoemacs-helm-ido-style-return nil)
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-5" class="outline-3">
+<h3 id="sec-5"><kbd class="dark">V</kbd>isual Regexp</h3>
+<div class="outline-text-3" id="text-5">
+
+<p>When <a href="https://github.com/benma/visual-regexp.el">visual regexp</a> is installed, ergoemacs-mode changes
+<code>query-replace-regexp</code> to <code>vr/query-replace</code>
+</p></div>
+
+</div>
+
+<div id="outline-container-6" class="outline-3">
+<h3 id="sec-6"><kbd class="dark">B</kbd>rowse-kill-ring and pasting</h3>
+<div class="outline-text-3" id="text-6">
+
+<p>The package <code>browse-kill-ring</code> can be integrated into the way that
+ergoemacs-mode pastes.  For information see
+<a href="smart-commands.html">smart commands</a>.
+</p></div>
+
+</div>
+
+<div id="outline-container-7" class="outline-3">
+<h3 id="sec-7"><kbd class="dark">H</kbd>ighlight Symbol and searching</h3>
+<div class="outline-text-3" id="text-7">
+
+</div>
+</div>
+
+  </div>
+</article>
+      </div>
+      <div id="footer">
+	<div class="container">
+	  <div class="row">
+	    <nav class="span3">
+	      <h1>About</h1>
+	      <p>
+This page explains how ergoemacs-mode works.  It was written in emacs
+org-mode and exported to HTML using <a href="https://github.com/renard/o-blog">o-blog</a>.
+</p>
+	    </nav>
+	    <nav id="links" class="span3">
+	      <h1>Links</h1>
+	      <ul>
+		<ul>
+<li><a href="./index.html"><i>icon-home icon-white</i> Home</a>
+</li>
+</ul>
+
+
+
+<ul>
+<li><a href="./testimonials.html"><i>icon-comments-alt icon-white</i> Testimonials</a>
+
+</li>
+<li><a href="./changelog.html"><i>icon-pencil icon-white</i> Changelog</a>
+
+</li>
+<li><a href="./roadmap.html"><i>icon-tasks icon-white</i> Roadmap</a>
+</li>
+</ul>
+
+
+	      </ul>
+	    </nav>
+	    <nav id="archives" class="span3">
+	      <h1><a href="./archives.html">Archives</a></h1>
+	      <ul>
+		
+	      </ul>
+	    </nav>
+	    <nav class="tags span3">
+	      <h1><a href="./tags/index.html">Tags</a></h1>
+	      <ul>
+  
+</ul>
+
+	    </nav>
+	  </div>
+	</div>
+	<div class="copyright" style="text-align: center;">
+	  <p>
+Documentation Copyright © 2007-2013 Matthew Fidler, Xah Lee and David
+Capello. Published under the therm of the <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/fr/">Creative Commons Attribution-Noncommercial-Share Alike 2.0 France License</a>.  Code
+published under <a href="http://www.gnu.org/licenses/gpl-2.0.html">GPL v2</a>.
+</p>
+	  <p>Powered by <a href="https://github.com/renard/o-blog">o-blog</a>.</p>
+	</div>
+      </div>
+</body>
+</html>
+

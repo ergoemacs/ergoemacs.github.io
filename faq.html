@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>FAQ</title>
+    <link rel="stylesheet" type="text/less" href="./style/less/o-blog.less"/>
+    <link rel="stylesheet" type="text/css" href="./style/keys.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="generator" content="o-blog version 1.2-137-gea23db7"/>
+    <link rel="stylesheet" href="./style/keys.css" type="text/css" />
+    <script src="./style/js/less-1.3.0.min.js" type="text/javascript"></script>
+    <script src="./style/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="./style/bootstrap/js/bootstrap-modal.js" type="text/javascript"></script>
+    <script src="./style/bootstrap/js/bootstrap-transition.js" type="text/javascript"></script>
+    <script src="./style/bootstrap/js/bootstrap-dropdown.js" type="text/javascript"></script>
+    <script src="./style/bootstrap/js/bootstrap-collapse.js" type="text/javascript"></script>
+
+    <script src="./style/js/prettify.js" type="text/javascript"></script>
+    <script src="./style/js/o-blog.linenumber.js" type="text/javascript"></script>
+    <script src="./style/js/o-blog-fix.js" type="text/javascript"></script>
+    
+    
+  </head>
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+	<div class="container">
+	  <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+	  <a class="brand" href="./index.html">ergoemacs-mode</a>
+	  <div class="nav-collapse collapse">
+	    <ul>
+<li><a href="./features.html"><i>icon-cog icon-white</i> Features</a>
+
+</li>
+<li><a href="#"><i>icon-book icon-white</i> Documentation</a>
+<ul>
+<li><a href="./key-setup.html">Included Key Themes and Keyboard Layouts</a>
+</li>
+<li><a href="./cua-conflict.html">Preserving Emacs Commands while maintaining familiar shortcuts</a>
+</li>
+<li>
+</li>
+<li><a href="./key-themes.html">Key Themes</a>
+</li>
+<li><a href="./keyboard-layouts.html">Keyboard Layouts</a> 
+</li>
+<li><a href="./minor-modes.html">Changes to Modes</a>
+</li>
+<li>
+</li>
+<li><a href="design-basis.html">Design Basis</a>
+</li>
+<li>
+</li>
+<li><a href="./faq.html">FAQ</a>
+</li>
+<li>
+</li>
+<li><a href="./bug-report.html">Bug report</a>
+
+</li>
+</ul>
+
+</li>
+<li><a href="#"><i>icon-file icon-white</i> Tips</a>
+<ul>
+<li><a href="./gradual-adoption.html">Gradual Adoption</a>
+</li>
+<li><a href="./system-wide.html">System Wide Keys</a>
+</li>
+<li><a href="./customize-keys.html">Customizing your keys</a>
+</li>
+<li>
+</li>
+<li><a href="./aliases.html">Making Commands Easier to Type</a>
+</li>
+<li><a href="./smart-commands.html">Smart Commands</a>
+
+</li>
+</ul>
+
+</li>
+<li><a href="./testimonials.html"><i>icon-comments-alt icon-white</i> Testimonials</a>
+
+</li>
+<li><a href="./changelog.html"><i>icon-pencil icon-white</i> Changelog</a>
+
+</li>
+<li><a href="./roadmap.html"><i>icon-tasks icon-white</i> Roadmap</a>
+</li>
+</ul>
+
+
+
+	  </div>
+	</div>
+      </div>
+    </div>
+    <div class="subnav subnav-fixed visible-desktop">
+      <div class="container">
+	<ul class="breadcrumb">
+  <li><a href="./index.html">Home</a> <span class="divider">/</span></li>
+  <li>FAQ</li>
+  </ul>
+
+      </div>
+    </div>
+    <div id="page" class="container">
+
+<article>
+  <div class="article-content">
+    <div id="outline-container-1" class="outline-3">
+<h3 id="sec-1"><kbd class="dark">W</kbd>hats the difference between ergoemacs and ergoemacs-mode?</h3>
+<div class="outline-text-3" id="text-1">
+
+<p><a href="http://ergoemacs.org/">Ergoemacs</a> is a set of customizations that make emacs easier to use.
+It also includes <a href="index.html">ergoemacs-mode</a>.  The minor mode, <a href="index.html">ergoemacs-mode</a>,
+implements the keybindings (and some other features) via a minor-mode
+that can be toggled to get back to standard emacs.
+</p></div>
+
+</div>
+
+<div id="outline-container-2" class="outline-3">
+<h3 id="sec-2"><kbd class="dark">H</kbd>ow do you select text when using ergoemacs-mode and ergoemacs-arrow keys</h3>
+<div class="outline-text-3" id="text-2">
+
+<p>You can hold the left <kbd class="dark">Alt</kbd>,
+then right hand press space to mark, then right hand using any of
+QWERTY 
+<kbd class="dark">i</kbd> 
+<kbd class="dark">j</kbd> 
+<kbd class="dark">k</kbd> 
+<kbd class="dark">l</kbd> to move by char, line, or 
+<kbd class="dark">u</kbd> 
+<kbd class="dark">o</kbd>  to move
+by word. ⇧ <Kbd Class="Dark">⇧ Shift</kbd>+<KBD CLASS="DARK">U</KBD> and ⇧ <Kbd Class="Dark">⇧ Shift</kbd>+<KBD CLASS="DARK">O</KBD> to move by paragraph/block.
+</p>
+<p>
+Of course, you can also use the <a href="standard-shortcuts.html">standard shortcuts</a>.  For example, 
+to select all, you can press <kbd class="dark">Ctrl</kbd>+<kbd class="dark">a</kbd>.  To move up, you can press ⇧
+<kbd class="dark">⇧ Shift</kbd>+<kbd class="dark">↓</kbd> to select text downward.
+</p>
+<p>
+Another option is to use the ergoemacs reduction key theme.  Then the
+shift-movement keys work. 
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-3">
+<h3 id="sec-3"><kbd class="dark">S</kbd>ome of my backspace keys have been muted by ergoemacs-mode</h3>
+<div class="outline-text-3" id="text-3">
+
+<p>Ergoemacs-mode allows key sequences to be changed with a backspace
+key.  This masks some of the delete key sequences like C-x Backspace which
+runs backward-kill-sentence.  You can turn this off by the following
+</p>
+
+
+
+<pre class="src src-emacs-lisp">(define-key ergoemacs-normal-translation-local-map (kbd <span style="font-style: italic;">"DEL"</span>) nil)
+
+</pre>
+
+
+<p>
+If you wish to remove it from the other specialized translations you can do that as well:
+</p>
+
+
+
+<pre class="src src-emacs-lisp">(define-key ergoemacs-ctl-to-alt-translation-local-map (kbd <span style="font-style: italic;">"DEL"</span>) nil)
+(define-key ergoemacs-unchordedl-translation-local-map (kbd <span style="font-style: italic;">"DEL"</span>) nil)
+</pre>
+
+
+<p>
+You can also allow ergoemacs-mode to translate the Delete key to
+backspace, so <kbd class="dark">Ctl</kbd>+<kbd class="dark">x</kbd> backspace can be typed as <kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd> Delete key
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-4" class="outline-3">
+<h3 id="sec-4"><kbd class="dark">H</kbd>ow do you get a 【▤ Menu】 key in Mac OS X</h3>
+<div class="outline-text-3" id="text-4">
+
+<p>Some of ergoemacs keys make use of the 【▤ Menu】 key.
+One way to set this up in a mac is to replace the Caps Lock key with
+F13 or above, and tell emacs that F13 is actually the menu key.  This
+is done by:
+</p>
+<ol>
+<li>Downloading and installing <a href="https://pqrs.org/macosx/keyremap4macbook/pckeyboardhack.html">PCKeyboardHack</a>
+</li>
+<li>Going to the system prefences and PCKeyboardHack
+</li>
+<li>Change the caps lock mapping to F13
+</li>
+<li>Adding the translation to emacs startup script (like ~/.emacs or
+   ~/.emacs.d/init.el) as follows:
+</li>
+</ol>
+
+
+
+
+
+<pre class="src src-emacs-lisp">(define-key key-translation-map (kbd <span style="font-style: italic;">"&lt;f13&gt;"</span>) (kbd <span style="font-style: italic;">"&lt;menu&gt;"</span>))
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-5" class="outline-3">
+<h3 id="sec-5"><kbd class="dark">W</kbd>hy don't you use the standard emacs key notation?</h3>
+<div class="outline-text-3" id="text-5">
+
+<p>The <a href="http://www.emacswiki.org/emacs/EmacsKeyNotation">emacs key notation</a> is common across emacs, but not common for new
+users.  One of the goals of ergoemacs-mode is to allow new emacs users
+to not have to learn anything about the keys to start using emacs.
+Therefore, all keys are defined in <kbd class="dark">Ctrl</kbd>+<kbd class="dark">s</kbd> notation instead of <code>C-s</code>
+notation.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-6" class="outline-3">
+<h3 id="sec-6"><kbd class="dark">I</kbd> was expecting C-j to be mapped to copy but instead it's C-c on my dvorak</h3>
+<div class="outline-text-3" id="text-6">
+
+<p>You have some options to get to copy and paste:
+</p><ul>
+<li>You can Alt + the normal key positions for undo cut copy paste
+</li>
+<li>If you want, you can easily do it with:
+</li>
+</ul>
+
+
+
+
+
+<pre class="src src-emacs-lisp">(global-set-key (kbd <span style="font-style: italic;">"&lt;C-j&gt;"</span>) 'ergoemacs-cut-line-or-region)
+</pre>
+
+
+<ul>
+<li>If you want you can keep <i>all</i> standard shortcuts in the normal
+  QWERTY positions by:
+</li>
+</ul>
+
+
+
+
+
+<pre class="src src-emacs-lisp">(setq ergoemacs-theme nil)
+(setq ergoemacs-change-fixed-layout-to-variable-layout t)
+(setq ergoemacs-keyboard-layout <span style="font-style: italic;">"dv"</span>)
+(<span style="font-weight: bold;">require</span> '<span style="font-weight: bold; text-decoration: underline;">ergoemacs-mode</span>)
+(ergoemacs-mode 1)
+</pre>
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-7" class="outline-3">
+<h3 id="sec-7"><kbd class="dark">I</kbd> want to modify my modifiers to work differently on a mac</h3>
+<div class="outline-text-3" id="text-7">
+
+<p>Ergoemacs-mode uses the option as an alt key because you can press it
+with a thumb.  If you want a different option, set:
+</p>
+
+
+
+<pre class="src src-emacs-lisp">(setq ergoemacs-use-mac-command-as-meta nil)
+</pre>
+
+</div>
+</div>
+
+  </div>
+</article>
+      </div>
+      <div id="footer">
+	<div class="container">
+	  <div class="row">
+	    <nav class="span3">
+	      <h1>About</h1>
+	      <p>
+This page explains how ergoemacs-mode works.  It was written in emacs
+org-mode and exported to HTML using <a href="https://github.com/renard/o-blog">o-blog</a>.
+</p>
+	    </nav>
+	    <nav id="links" class="span3">
+	      <h1>Links</h1>
+	      <ul>
+		<ul>
+<li><a href="./index.html"><i>icon-home icon-white</i> Home</a>
+</li>
+</ul>
+
+
+
+<ul>
+<li><a href="./testimonials.html"><i>icon-comments-alt icon-white</i> Testimonials</a>
+
+</li>
+<li><a href="./changelog.html"><i>icon-pencil icon-white</i> Changelog</a>
+
+</li>
+<li><a href="./roadmap.html"><i>icon-tasks icon-white</i> Roadmap</a>
+</li>
+</ul>
+
+
+	      </ul>
+	    </nav>
+	    <nav id="archives" class="span3">
+	      <h1><a href="./archives.html">Archives</a></h1>
+	      <ul>
+		
+	      </ul>
+	    </nav>
+	    <nav class="tags span3">
+	      <h1><a href="./tags/index.html">Tags</a></h1>
+	      <ul>
+  
+</ul>
+
+	    </nav>
+	  </div>
+	</div>
+	<div class="copyright" style="text-align: center;">
+	  <p>
+Documentation Copyright © 2007-2013 Matthew Fidler, Xah Lee and David
+Capello. Published under the therm of the <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/fr/">Creative Commons Attribution-Noncommercial-Share Alike 2.0 France License</a>.  Code
+published under <a href="http://www.gnu.org/licenses/gpl-2.0.html">GPL v2</a>.
+</p>
+	  <p>Powered by <a href="https://github.com/renard/o-blog">o-blog</a>.</p>
+	</div>
+      </div>
+</body>
+</html>
+

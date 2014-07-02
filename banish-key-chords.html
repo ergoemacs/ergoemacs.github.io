@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Banish Key Chords</title>
+    <link rel="stylesheet" type="text/less" href="./style/less/o-blog.less"/>
+    <link rel="stylesheet" type="text/css" href="./style/keys.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="generator" content="o-blog version 1.2-137-gea23db7"/>
+    <link rel="stylesheet" href="./style/keys.css" type="text/css" />
+    <script src="./style/js/less-1.3.0.min.js" type="text/javascript"></script>
+    <script src="./style/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="./style/bootstrap/js/bootstrap-modal.js" type="text/javascript"></script>
+    <script src="./style/bootstrap/js/bootstrap-transition.js" type="text/javascript"></script>
+    <script src="./style/bootstrap/js/bootstrap-dropdown.js" type="text/javascript"></script>
+    <script src="./style/bootstrap/js/bootstrap-collapse.js" type="text/javascript"></script>
+
+    <script src="./style/js/prettify.js" type="text/javascript"></script>
+    <script src="./style/js/o-blog.linenumber.js" type="text/javascript"></script>
+    <script src="./style/js/o-blog-fix.js" type="text/javascript"></script>
+    
+    
+  </head>
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+	<div class="container">
+	  <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+	  <a class="brand" href="./index.html">ergoemacs-mode</a>
+	  <div class="nav-collapse collapse">
+	    <ul>
+<li><a href="./features.html"><i>icon-cog icon-white</i> Features</a>
+
+</li>
+<li><a href="#"><i>icon-book icon-white</i> Documentation</a>
+<ul>
+<li><a href="./key-setup.html">Included Key Themes and Keyboard Layouts</a>
+</li>
+<li><a href="./cua-conflict.html">Preserving Emacs Commands while maintaining familiar shortcuts</a>
+</li>
+<li>
+</li>
+<li><a href="./key-themes.html">Key Themes</a>
+</li>
+<li><a href="./keyboard-layouts.html">Keyboard Layouts</a> 
+</li>
+<li><a href="./minor-modes.html">Changes to Modes</a>
+</li>
+<li>
+</li>
+<li><a href="design-basis.html">Design Basis</a>
+</li>
+<li>
+</li>
+<li><a href="./faq.html">FAQ</a>
+</li>
+<li>
+</li>
+<li><a href="./bug-report.html">Bug report</a>
+
+</li>
+</ul>
+
+</li>
+<li><a href="#"><i>icon-file icon-white</i> Tips</a>
+<ul>
+<li><a href="./gradual-adoption.html">Gradual Adoption</a>
+</li>
+<li><a href="./system-wide.html">System Wide Keys</a>
+</li>
+<li><a href="./customize-keys.html">Customizing your keys</a>
+</li>
+<li>
+</li>
+<li><a href="./aliases.html">Making Commands Easier to Type</a>
+</li>
+<li><a href="./smart-commands.html">Smart Commands</a>
+
+</li>
+</ul>
+
+</li>
+<li><a href="./testimonials.html"><i>icon-comments-alt icon-white</i> Testimonials</a>
+
+</li>
+<li><a href="./changelog.html"><i>icon-pencil icon-white</i> Changelog</a>
+
+</li>
+<li><a href="./roadmap.html"><i>icon-tasks icon-white</i> Roadmap</a>
+</li>
+</ul>
+
+
+
+	  </div>
+	</div>
+      </div>
+    </div>
+    <div class="subnav subnav-fixed visible-desktop">
+      <div class="container">
+	<ul class="breadcrumb">
+  <li><a href="./index.html">Home</a> <span class="divider">/</span></li>
+  <li>Banish Key Chords</li>
+  </ul>
+
+      </div>
+    </div>
+    <div id="page" class="container">
+
+<article>
+  <div class="article-content">
+    <p>
+This is an experimental ergoemacs feature to banish key chord and
+replace ergoemacs keys.  The background is given in the following pages
+</p><ul>
+<li>Why it would be good to <a href="http://xahlee.info/kbd/banish_key_chords.html">banish key chords</a>.
+</li>
+<li>Xah's quest to <a href="http://ergoemacs.org/emacs/emacs_keybinding_redesign_2.html">totally redesign the keys</a>.
+</li>
+</ul>
+
+
+
+<div id="outline-container-1" class="outline-3">
+<h3 id="sec-1"><kbd class="dark">C</kbd>hanging <kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd> and <kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd></h3>
+<div class="outline-text-3" id="text-1">
+
+<p>For emacs, the most common key sequences start with C-x or C-c. This
+usually requires the use of the control key, and leads to the dreaded
+<a href="http://ergoemacs.org/emacs/emacs_pinky.html">emacs pinky</a>.  It also conflicts with the standard Cut and Copy
+commands (see <a href="standard-shortcuts.html">standard shortcuts</a>).
+</p>
+<p>
+I've thought about how to take out the use of the
+control key and reduce the key chord reduction. This is how
+I came up with the <kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd> and <kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd> replacements:
+</p>
+<ul>
+<li>Ctrl-x commands can be accessed by QWERTY 
+  <kbd class="dark">Menu</kbd>  <kbd class="dark">d</kbd>
+<ul>
+<li>This is <b>not</b> the same as the traditional <kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd>. Heres how its
+    different:
+<ul>
+<li>By default all <kbd class="dark">Ctrl</kbd> commands are translated to <kbd class="dark">Alt</kbd> commands.
+<ul>
+<li><kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd> <kbd class="dark">Ctrl</kbd>+<kbd class="dark">b</kbd> could be accessed by <kbd class="dark">Menu</kbd> <kbd class="dark">d</kbd> <kbd class="dark">Alt</kbd>+<kbd class="dark">b</kbd> (list-buffers)
+</li>
+<li>C-x b could be accessed by <kbd class="dark">Menu</kbd> <kbd class="dark">d</kbd> <kbd class="dark">b</kbd> (switch-to-buffer)
+</li>
+</ul>
+
+</li>
+<li>Pressing <kbd class="dark">Menu</kbd> will
+      change the type of key translation used.  The default for <kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd> is
+      translate/swap the Alt and Ctl keys.  Pressing Menu again will:
+<ul>
+<li>Make the keyboard translation for C-x "unchorded"
+</li>
+<li>The pressing Menu would remove the keyboard translation for <kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd>.
+</li>
+<li>Finally pressing Menu again would result the translation/swap
+        of Ctrl and Alt (as at the beginning).
+</li>
+</ul>
+
+</li>
+</ul>
+
+</li>
+</ul>
+
+</li>
+</ul>
+
+
+<p>
+For your information, an "unchorded" filter/translation would translate:
+</p><ul>
+<li>Ctrl key combinations to standard keys.  For example <kbd class="dark">Ctrl</kbd>+<kbd class="dark">b</kbd> would be
+  just b.
+</li>
+<li>Standard keys like b would be translated to <kbd class="dark">Alt</kbd>+<kbd class="dark">b</kbd>.
+</li>
+<li>Alt key combinations would be translated to Ctrl key combinations.
+  Therefore <kbd class="dark">Alt</kbd>+<kbd class="dark">b</kbd> would be translated to <kbd class="dark">Ctrl</kbd>+<kbd class="dark">b</kbd>.
+
+</li>
+<li>C-c commands can be accessed by QWERTY 
+  <kbd class="dark">Menu</kbd>  <kbd class="dark">f</kbd>
+<ul>
+<li>This is <b>not</b> the same as the traditional <kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd>. Heres how its
+    different:
+<ul>
+<li>By default the "unchorded" filter is on.  This is because by <a href="http://www.gnu.org/software/emacs/manual/html_node/elisp/Key-Binding-Conventions.html">convention</a>,
+      major modes bind control keys like <kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd> <kbd class="dark">Ctrl</kbd>+<kbd class="dark">r</kbd> and leave keys like
+      <kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd> r to be bound by the user.  This means that you would put
+      less strain on your hand to have these key combinations to be
+      unchorded by default.
+</li>
+<li><kbd class="dark">Ctrl</kbd> commands are translated to <kbd class="dark">Alt</kbd> commands.
+</li>
+</ul>
+
+</li>
+<li>Like C-x, pressing Menu changes the filter
+<ul>
+<li>First Menu press changes the unchorded filter to the ctl &lt;-&gt;
+      alt filter
+</li>
+<li>Second Menu press removes the filter
+</li>
+<li>Press Menu again to go back to the unchorded keyboard filter.*
+</li>
+</ul>
+
+</li>
+</ul>
+
+</li>
+</ul>
+
+</div>
+</div>
+
+  </div>
+</article>
+      </div>
+      <div id="footer">
+	<div class="container">
+	  <div class="row">
+	    <nav class="span3">
+	      <h1>About</h1>
+	      <p>
+This page explains how ergoemacs-mode works.  It was written in emacs
+org-mode and exported to HTML using <a href="https://github.com/renard/o-blog">o-blog</a>.
+</p>
+	    </nav>
+	    <nav id="links" class="span3">
+	      <h1>Links</h1>
+	      <ul>
+		<ul>
+<li><a href="./index.html"><i>icon-home icon-white</i> Home</a>
+</li>
+</ul>
+
+
+
+<ul>
+<li><a href="./testimonials.html"><i>icon-comments-alt icon-white</i> Testimonials</a>
+
+</li>
+<li><a href="./changelog.html"><i>icon-pencil icon-white</i> Changelog</a>
+
+</li>
+<li><a href="./roadmap.html"><i>icon-tasks icon-white</i> Roadmap</a>
+</li>
+</ul>
+
+
+	      </ul>
+	    </nav>
+	    <nav id="archives" class="span3">
+	      <h1><a href="./archives.html">Archives</a></h1>
+	      <ul>
+		
+	      </ul>
+	    </nav>
+	    <nav class="tags span3">
+	      <h1><a href="./tags/index.html">Tags</a></h1>
+	      <ul>
+  
+</ul>
+
+	    </nav>
+	  </div>
+	</div>
+	<div class="copyright" style="text-align: center;">
+	  <p>
+Documentation Copyright © 2007-2013 Matthew Fidler, Xah Lee and David
+Capello. Published under the therm of the <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/fr/">Creative Commons Attribution-Noncommercial-Share Alike 2.0 France License</a>.  Code
+published under <a href="http://www.gnu.org/licenses/gpl-2.0.html">GPL v2</a>.
+</p>
+	  <p>Powered by <a href="https://github.com/renard/o-blog">o-blog</a>.</p>
+	</div>
+      </div>
+</body>
+</html>
+
