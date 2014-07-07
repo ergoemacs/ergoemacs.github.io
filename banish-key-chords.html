@@ -127,7 +127,7 @@ replace ergoemacs keys.  The background is given in the following pages
 
 
 <div id="outline-container-1" class="outline-3">
-<h3 id="sec-1"><kbd class="dark">C</kbd>hanging <kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd> and <kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd></h3>
+<h3 id="sec-1">Changing Ctrl+x and Ctrl+c</h3>
 <div class="outline-text-3" id="text-1">
 
 <p>For emacs, the most common key sequences start with C-x or C-c. This
@@ -138,31 +138,31 @@ commands (see <a href="standard-shortcuts.html">standard shortcuts</a>).
 <p>
 I've thought about how to take out the use of the
 control key and reduce the key chord reduction. This is how
-I came up with the <kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd> and <kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd> replacements:
+I came up with the Ctrl+c and Ctrl+x replacements:
 </p>
 <ul>
 <li>Ctrl-x commands can be accessed by QWERTY 
-  <kbd class="dark">Menu</kbd>  <kbd class="dark">d</kbd>
+  @@html:&lt;kbd class="dark"&gt;@@Menu@@html:&lt;/kbd&gt;@@  @@html:&lt;kbd class="dark"&gt;@@d@@html:&lt;/kbd&gt;@@
 <ul>
-<li>This is <b>not</b> the same as the traditional <kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd>. Heres how its
+<li>This is <b>not</b> the same as the traditional Ctrl+x. Heres how its
     different:
 <ul>
-<li>By default all <kbd class="dark">Ctrl</kbd> commands are translated to <kbd class="dark">Alt</kbd> commands.
+<li>By default all @@html:&lt;kbd class="dark"&gt;@@Ctrl@@html:&lt;/kbd&gt;@@ commands are translated to @@html:&lt;kbd class="dark"&gt;@@Alt@@html:&lt;/kbd&gt;@@ commands.
 <ul>
-<li><kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd> <kbd class="dark">Ctrl</kbd>+<kbd class="dark">b</kbd> could be accessed by <kbd class="dark">Menu</kbd> <kbd class="dark">d</kbd> <kbd class="dark">Alt</kbd>+<kbd class="dark">b</kbd> (list-buffers)
+<li>Ctrl+x Ctrl+b could be accessed by @@html:&lt;kbd class="dark"&gt;@@Menu@@html:&lt;/kbd&gt;@@ @@html:&lt;kbd class="dark"&gt;@@d@@html:&lt;/kbd&gt;@@ @@html:&lt;kbd class="dark"&gt;@@Alt@@html:&lt;/kbd&gt;@@+@@html:&lt;kbd class="dark"&gt;@@b@@html:&lt;/kbd&gt;@@ (list-buffers)
 </li>
-<li>C-x b could be accessed by <kbd class="dark">Menu</kbd> <kbd class="dark">d</kbd> <kbd class="dark">b</kbd> (switch-to-buffer)
+<li>C-x b could be accessed by @@html:&lt;kbd class="dark"&gt;@@Menu@@html:&lt;/kbd&gt;@@ @@html:&lt;kbd class="dark"&gt;@@d@@html:&lt;/kbd&gt;@@ @@html:&lt;kbd class="dark"&gt;@@b@@html:&lt;/kbd&gt;@@ (switch-to-buffer)
 </li>
 </ul>
 
 </li>
-<li>Pressing <kbd class="dark">Menu</kbd> will
-      change the type of key translation used.  The default for <kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd> is
+<li>Pressing @@html:&lt;kbd class="dark"&gt;@@Menu@@html:&lt;/kbd&gt;@@ will
+      change the type of key translation used.  The default for Ctrl+x is
       translate/swap the Alt and Ctl keys.  Pressing Menu again will:
 <ul>
 <li>Make the keyboard translation for C-x "unchorded"
 </li>
-<li>The pressing Menu would remove the keyboard translation for <kbd class="dark">Ctrl</kbd>+<kbd class="dark">x</kbd>.
+<li>The pressing Menu would remove the keyboard translation for Ctrl+x.
 </li>
 <li>Finally pressing Menu again would result the translation/swap
         of Ctrl and Alt (as at the beginning).
@@ -182,28 +182,28 @@ I came up with the <kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd> and <k
 <p>
 For your information, an "unchorded" filter/translation would translate:
 </p><ul>
-<li>Ctrl key combinations to standard keys.  For example <kbd class="dark">Ctrl</kbd>+<kbd class="dark">b</kbd> would be
+<li>Ctrl key combinations to standard keys.  For example Ctrl+b would be
   just b.
 </li>
-<li>Standard keys like b would be translated to <kbd class="dark">Alt</kbd>+<kbd class="dark">b</kbd>.
+<li>Standard keys like b would be translated to Alt+b.
 </li>
 <li>Alt key combinations would be translated to Ctrl key combinations.
-  Therefore <kbd class="dark">Alt</kbd>+<kbd class="dark">b</kbd> would be translated to <kbd class="dark">Ctrl</kbd>+<kbd class="dark">b</kbd>.
+  Therefore Alt+b would be translated to Ctrl+b.
 
 </li>
 <li>C-c commands can be accessed by QWERTY 
-  <kbd class="dark">Menu</kbd>  <kbd class="dark">f</kbd>
+  @@html:&lt;kbd class="dark"&gt;@@Menu@@html:&lt;/kbd&gt;@@  @@html:&lt;kbd class="dark"&gt;@@f@@html:&lt;/kbd&gt;@@
 <ul>
-<li>This is <b>not</b> the same as the traditional <kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd>. Heres how its
+<li>This is <b>not</b> the same as the traditional Ctrl+c. Heres how its
     different:
 <ul>
 <li>By default the "unchorded" filter is on.  This is because by <a href="http://www.gnu.org/software/emacs/manual/html_node/elisp/Key-Binding-Conventions.html">convention</a>,
-      major modes bind control keys like <kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd> <kbd class="dark">Ctrl</kbd>+<kbd class="dark">r</kbd> and leave keys like
-      <kbd class="dark">Ctrl</kbd>+<kbd class="dark">c</kbd> r to be bound by the user.  This means that you would put
+      major modes bind control keys like Ctrl+c Ctrl+r and leave keys like
+      Ctrl+c r to be bound by the user.  This means that you would put
       less strain on your hand to have these key combinations to be
       unchorded by default.
 </li>
-<li><kbd class="dark">Ctrl</kbd> commands are translated to <kbd class="dark">Alt</kbd> commands.
+<li>@@html:&lt;kbd class="dark"&gt;@@Ctrl@@html:&lt;/kbd&gt;@@ commands are translated to @@html:&lt;kbd class="dark"&gt;@@Alt@@html:&lt;/kbd&gt;@@ commands.
 </li>
 </ul>
 
