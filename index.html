@@ -220,8 +220,11 @@ type:
 
 <p>
 After, find the package `ergoemacs-mode` and install it with 
-#HTML: &lt;kbd class="dark"&gt;I&lt;/kbd&gt;&lt;kbd class="dark"&gt;X&lt;/kbd&gt;
 </p>
+
+
+<kbd class="dark">I</kbd><kbd class="dark">X</kbd>
+
 <p>
 Then add the following to your <code>~/.emacs</code> or <code>~/.emacs.d/init.el</code>
 file:
@@ -259,7 +262,7 @@ And add following to your <code>~/.emacs</code> or <code>~/.emacs.d/init.el</cod
 
 
 
-<pre class="src src-emacs-lisp">(add-to-list 'load-path <span style="font-style: italic;">"~/.emacs.d/ergoemacs-mode"</span>)
+<pre class="src src-emacs-lisp">(package-initialize)
 (<span style="font-weight: bold;">require</span> '<span style="font-weight: bold; text-decoration: underline;">ergoemacs-mode</span>)
 
 </pre>
@@ -278,7 +281,7 @@ And add following to your <code>~/.emacs</code> or <code>~/.emacs.d/init.el</cod
 <h3 id="sec-2">Enabling ergoemacs-mode</h3>
 <div class="outline-text-3" id="text-2">
 
-<p>To enable emacs, add the following to your <code>~/.emacs.d/init.el</code> file:
+<p>To enable emacs, add the following to your <code>~/.emacs</code> or <code>~/.emacs.d/init.el</code> file:
 </p>
 
 
