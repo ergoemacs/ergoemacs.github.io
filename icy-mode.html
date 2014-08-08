@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Icicles with ergoemacs-mode</title>
+    <link rel="stylesheet" type="text/less" href="./style/less/o-blog.less"/>
+    <link rel="stylesheet" type="text/css" href="./style/keys.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="generator" content="o-blog version 1.2-137-gea23db7"/>
+    <link rel="stylesheet" href="./style/keys.css" type="text/css" />
+    <script src="./style/js/less-1.3.0.min.js" type="text/javascript"></script>
+    <script src="./style/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="./style/bootstrap/js/bootstrap-modal.js" type="text/javascript"></script>
+    <script src="./style/bootstrap/js/bootstrap-transition.js" type="text/javascript"></script>
+    <script src="./style/bootstrap/js/bootstrap-dropdown.js" type="text/javascript"></script>
+    <script src="./style/bootstrap/js/bootstrap-collapse.js" type="text/javascript"></script>
+
+    <script src="./style/js/prettify.js" type="text/javascript"></script>
+    <script src="./style/js/o-blog.linenumber.js" type="text/javascript"></script>
+    <script src="./style/js/o-blog-fix.js" type="text/javascript"></script>
+    
+    
+  </head>
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+	<div class="container">
+	  <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+	  <a class="brand" href="./index.html">ergoemacs-mode</a>
+	  <div class="nav-collapse collapse">
+	    <ul>
+<li><a href="./features.html"><i>icon-cog icon-white</i> Features</a>
+
+</li>
+<li><a href="#"><i>icon-book icon-white</i> Documentation</a>
+<ul>
+<li><a href="./key-setup.html">Included Key Themes and Keyboard Layouts</a>
+</li>
+<li><a href="./cua-conflict.html">Preserving Emacs Commands while maintaining familiar shortcuts</a>
+</li>
+<li>
+</li>
+<li><a href="./key-themes.html">Key Themes</a>
+</li>
+<li><a href="./keyboard-layouts.html">Keyboard Layouts</a> 
+</li>
+<li><a href="./minor-modes.html">Changes to Modes</a>
+</li>
+<li>
+</li>
+<li><a href="design-basis.html">Design Basis</a>
+</li>
+<li>
+</li>
+<li><a href="./faq.html">FAQ</a>
+</li>
+<li>
+</li>
+<li><a href="./bug-report.html">Bug report</a>
+
+</li>
+</ul>
+
+</li>
+<li><a href="#"><i>icon-file icon-white</i> Tips</a>
+<ul>
+<li><a href="./gradual-adoption.html">Gradual Adoption</a>
+</li>
+<li><a href="./system-wide.html">System Wide Keys</a>
+</li>
+<li><a href="./customize-keys.html">Customizing your keys</a>
+</li>
+<li>
+</li>
+<li><a href="./aliases.html">Making Commands Easier to Type</a>
+</li>
+<li><a href="./smart-commands.html">Smart Commands</a>
+
+</li>
+</ul>
+
+</li>
+<li><a href="./testimonials.html"><i>icon-comments-alt icon-white</i> Testimonials</a>
+
+</li>
+<li><a href="./changelog.html"><i>icon-pencil icon-white</i> Changelog</a>
+
+</li>
+<li><a href="./roadmap.html"><i>icon-tasks icon-white</i> Roadmap</a>
+</li>
+</ul>
+
+
+
+	  </div>
+	</div>
+      </div>
+    </div>
+    <div class="subnav subnav-fixed visible-desktop">
+      <div class="container">
+	<ul class="breadcrumb">
+  <li><a href="./index.html">Home</a> <span class="divider">/</span></li>
+  <li>Icicles with ergoemacs-mode</li>
+  </ul>
+
+      </div>
+    </div>
+    <div id="page" class="container">
+
+<article>
+  <div class="article-content">
+    <p>
+<b>Authors:</b> Nikolay Kudryavtsev and Matthew L Fidler
+</p>
+<p>
+Icicles is a complicated library with many different
+keybindings. Ergoemacs also has quite few keybindings of it's
+own. Since both packages were originally developed separately it is
+understandable that there can be a conflict between them. This
+documentation lists the known cases of conflict.
+</p>
+
+<div id="outline-container-1" class="outline-3">
+<h3 id="sec-1">Things that work differently with ergoemacs</h3>
+<div class="outline-text-3" id="text-1">
+
+
+
+</div>
+
+<div id="outline-container-1-1" class="outline-4">
+<h4 id="sec-1-1">Icicle history element cycling is moved to F11 and F12</h4>
+<div class="outline-text-4" id="text-1-1">
+
+<p>Icicles uses M-p and M-n for `icicle-previous-history-element` and
+`icicle-next-history-element`. Since those are perfect examples of
+non-ergonomic keys, ergoemacs changes them to F11 and F12. This is
+consistent with changes to other packages.
+</p></div>
+
+</div>
+
+<div id="outline-container-1-2" class="outline-4">
+<h4 id="sec-1-2">Icicles insert history element with M-F11 or M-F12</h4>
+<div class="outline-text-4" id="text-1-2">
+
+
+<p>
+In icicles you can <a href="http://www.emacswiki.org/emacs/Icicles_-_History_Enhancements#toc4">insert an element from your minibuffer history</a>,
+thus limiting your candidates only to the ones in your minibuffer
+history.  In `ergoemacs-mode` This can be done by M-F11 or M-F12.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-1-3" class="outline-4">
+<h4 id="sec-1-3">Icicles candiate cycling is moved to QWERTY M-i and M-k</h4>
+<div class="outline-text-4" id="text-1-3">
+
+<p>In the vanila icicles `icicle-previous-candidate-per-mode` and
+`icicles-next-candidate-per-mode` are cycled using C-p and C-n. This
+is not ergonomic, so in ergoemacs it was moved to M-i and M-k. 
+</p>
+<p>
+Whenever icicles binds a standard key like C-p or C-n, or C-s,
+ergoemacs-mode looks up the change and runs the mode-based changed
+key.  
+</p></div>
+
+</div>
+
+<div id="outline-container-1-4" class="outline-4">
+<h4 id="sec-1-4">Key Completion</h4>
+<div class="outline-text-4" id="text-1-4">
+
+<p>In icicles you can <a href="http://www.emacswiki.org/emacs/Icicles_-_Key_Completion">easily see all available keys using key completion</a>. The default key for this is S-TAB for buffers and M-S-TAB
+for the minibuffer. Due to M-TAB being used by default by some window
+managers including Windows, ESC-S-TAB is also available by
+default. Since ESC works like C-g in ergoemacs, ESC-S-TAB binding
+would not work with it. 
+</p>
+<p>
+When icicles and ergoemacs-mode is enabled, pressing f1 in the key
+sequence will start the key completion.
+</p>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-3">
+<h3 id="sec-2">Things that do not work with ergoemacs out of box</h3>
+<div class="outline-text-3" id="text-2">
+
+<p>Things here conflict with some ergoemacs keybindings, but can be
+easily fixed by the user.
+</p>
+</div>
+
+<div id="outline-container-2-1" class="outline-4">
+<h4 id="sec-2-1">How to redifine keys from icicles</h4>
+<div class="outline-text-4" id="text-2-1">
+
+<p>The most basic ergoemacs theme component for icicles looks like
+this. Since most of the icicles keybindings are connected to
+minibufer, you should put your keybindings within "when
+`icicle-minibuffer-setup-hook`" form.
+</p>
+
+
+<pre class="src src-emacs-lisp">(<span style="font-weight: bold;">ergoemacs-component</span> <span style="font-weight: bold; text-decoration: underline;">ergoemacs-icicles-user</span> ()
+  <span style="font-style: italic;">"Ergoemacs-mode theme component for icicles"</span>
+  (<span style="font-weight: bold;">when</span> icicle-minibuffer-setup-hook
+    (define-key minibuffer-local-map (kbd <span style="font-style: italic;">"M-p"</span>) 'icicle-insert-history-element)))
+(ergoemacs-require 'ergoemacs-icicles-user)
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-2-2" class="outline-4">
+<h4 id="sec-2-2">C-M-j - icicle-insert-list-join-string</h4>
+<div class="outline-text-4" id="text-2-2">
+
+<p>Icicles <a href="http://www.emacswiki.org/emacs/Icicles_-_Multi-Completions#toc2">allows you to match only those candidates that have particular text within them</a>. A rather complex example is available <a href="http://www.emacswiki.org/emacs/Icicles_-_Nutshell_View#toc6">here</a>.
+</p>
+</div>
+
+<div id="outline-container-2-2-1" class="outline-5">
+<h5 id="sec-2-2-1">How to fix</h5>
+<div class="outline-text-5" id="text-2-2-1">
+
+<p>C-M-h is a good candidate, since it's close enough to the original
+key, but does not conflict with ergoemacs:
+</p>
+
+
+<pre class="src src-emacs-lisp">(define-key minibuffer-local-map (kbd <span style="font-style: italic;">"C-M-h"</span>) 'icicle-insert-list-join-string)
+</pre>
+
+</div>
+</div>
+</div>
+</div>
+
+  </div>
+</article>
+      </div>
+      <div id="footer">
+	<div class="container">
+	  <div class="row">
+	    <nav class="span3">
+	      <h1>About</h1>
+	      <p>
+This page explains how ergoemacs-mode works.  It was written in emacs
+org-mode and exported to HTML using <a href="https://github.com/renard/o-blog">o-blog</a>.
+</p>
+	    </nav>
+	    <nav id="links" class="span3">
+	      <h1>Links</h1>
+	      <ul>
+		<ul>
+<li><a href="./index.html"><i>icon-home icon-white</i> Home</a>
+</li>
+</ul>
+
+
+
+<ul>
+<li><a href="./testimonials.html"><i>icon-comments-alt icon-white</i> Testimonials</a>
+
+</li>
+<li><a href="./changelog.html"><i>icon-pencil icon-white</i> Changelog</a>
+
+</li>
+<li><a href="./roadmap.html"><i>icon-tasks icon-white</i> Roadmap</a>
+</li>
+</ul>
+
+
+	      </ul>
+	    </nav>
+	    <nav id="archives" class="span3">
+	      <h1><a href="./archives.html">Archives</a></h1>
+	      <ul>
+		
+	      </ul>
+	    </nav>
+	    <nav class="tags span3">
+	      <h1><a href="./tags/index.html">Tags</a></h1>
+	      <ul>
+  
+</ul>
+
+	    </nav>
+	  </div>
+	</div>
+	<div class="copyright" style="text-align: center;">
+	  <p>
+Documentation Copyright © 2007-2013 Matthew Fidler, Xah Lee and David
+Capello. Published under the therm of the <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/fr/">Creative Commons Attribution-Noncommercial-Share Alike 2.0 France License</a>.  Code
+published under <a href="http://www.gnu.org/licenses/gpl-2.0.html">GPL v2</a>.
+</p>
+	  <p>Powered by <a href="https://github.com/renard/o-blog">o-blog</a>.</p>
+	</div>
+      </div>
+</body>
+</html>
+
