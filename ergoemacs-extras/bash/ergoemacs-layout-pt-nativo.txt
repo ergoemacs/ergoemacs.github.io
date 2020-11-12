@@ -1,8 +1,7 @@
-# date: 2010-06-15
-# version: 1.0
-# Author: Brendan Miller.
+# version: 1.1
+# Author: Brendan Miller, Walter Landry
 # Description: this file makes bash's editing shortucts to be ErgoEmacs keybinding, for PT-NATIVO layout.
-# For layout of ErgoEmacs keys, see: http://xahlee.org/emacs/ergonomic_emacs_keybinding.html
+# For layout of ErgoEmacs keys, see: https://ergoemacs.github.io/
 
 # INSTALL
 # to install, rename this file to just ".inputrc"
@@ -16,22 +15,22 @@
 
 set editing-mode emacs
 
-"\ei": backward-char
-"\eh": forward-char
-"\ex": previous-history
-"\ee": next-history
+"\ed": backward-char
+"\er": forward-char
+"\et": previous-history
+"\es": next-history
 "\em": beginning-of-line
 "\eM": end-of-line
-"\eR": backward-word
-"\ej": forward-word
+"\ei": backward-word
+"\ec": forward-word
 "\eu": kill-line
 "\e.": backward-kill-word
-"\er": kill-word
-"\ed": backward-delete-char
+"\eh": kill-word
+"\ea": backward-delete-char
 "\eo": delete-char
-"\eY": undo
+"\ey": undo
 "\eç": kill-region
-"\eJ": copy-region-as-kill
-"\ek": yank
-"\e;": forward-search-history
-"\e:": reverse-search-history
+"\ej": copy-region-as-kill
+"\eb": yank
+"\en": forward-search-history
+"\eN": reverse-search-history

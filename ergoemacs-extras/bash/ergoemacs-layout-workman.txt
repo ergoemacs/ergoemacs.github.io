@@ -1,8 +1,7 @@
-# date: 2010-06-15
-# version: 1.0
-# Author: Brendan Miller.
+# version: 1.1
+# Author: Brendan Miller, Walter Landry
 # Description: this file makes bash's editing shortucts to be ErgoEmacs keybinding, for WORKMAN layout.
-# For layout of ErgoEmacs keys, see: http://xahlee.org/emacs/ergonomic_emacs_keybinding.html
+# For layout of ErgoEmacs keys, see: https://ergoemacs.github.io/
 
 # INSTALL
 # to install, rename this file to just ".inputrc"
@@ -16,22 +15,22 @@
 
 set editing-mode emacs
 
-"\ek": backward-char
-"\e;": forward-char
-"\ev": previous-history
-"\ed": next-history
-"\ej": beginning-of-line
-"\eJ": end-of-line
-"\eF": backward-word
-"\eP": forward-word
+"\en": backward-char
+"\eo": forward-char
+"\eu": previous-history
+"\ee": next-history
+"\ey": beginning-of-line
+"\eY": end-of-line
+"\ef": backward-word
+"\ep": forward-word
 "\eg": kill-line
-"\ee": backward-kill-word
-"\er": kill-word
+"\er": backward-kill-word
+"\ew": kill-word
 "\eh": backward-delete-char
-"\ef": delete-char
+"\et": delete-char
 "\ez": undo
 "\ex": kill-region
 "\em": copy-region-as-kill
-"\eM": yank
-"\e;": forward-search-history
-"\e:": reverse-search-history
+"\ec": yank
+"\ei": forward-search-history
+"\eI": reverse-search-history

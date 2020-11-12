@@ -1,8 +1,7 @@
-# date: 2010-06-15
-# version: 1.0
-# Author: Brendan Miller.
+# version: 1.1
+# Author: Brendan Miller, Walter Landry
 # Description: this file makes bash's editing shortucts to be ErgoEmacs keybinding, for GB-DV layout.
-# For layout of ErgoEmacs keys, see: http://xahlee.org/emacs/ergonomic_emacs_keybinding.html
+# For layout of ErgoEmacs keys, see: https://ergoemacs.github.io/
 
 # INSTALL
 # to install, rename this file to just ".inputrc"
@@ -16,22 +15,22 @@
 
 set editing-mode emacs
 
-"\e.": backward-char
-"\ex": forward-char
-"\ej": previous-history
-"\ey": next-history
-"\eD": beginning-of-line
-"\eH": end-of-line
-"\ei": backward-word
-"\ep": forward-word
-"\eI": kill-line
-"\ee": backward-kill-word
-"\er": kill-word
-"\ed": backward-delete-char
+"\eh": backward-char
+"\en": forward-char
+"\ec": previous-history
+"\et": next-history
+"\ed": beginning-of-line
+"\eD": end-of-line
+"\eg": backward-word
+"\er": forward-word
+"\ei": kill-line
+"\e.": backward-kill-word
+"\ep": kill-word
+"\ee": backward-delete-char
 "\eu": delete-char
-"\e:": undo
-"\e/": kill-region
-"\eJ": copy-region-as-kill
+"\e;": undo
+"\eq": kill-region
+"\ej": copy-region-as-kill
 "\ek": yank
-"\e;": forward-search-history
-"\e:": reverse-search-history
+"\es": forward-search-history
+"\eS": reverse-search-history

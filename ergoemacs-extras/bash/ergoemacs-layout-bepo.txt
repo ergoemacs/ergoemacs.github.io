@@ -1,8 +1,7 @@
-# date: 2010-06-15
-# version: 1.0
-# Author: Brendan Miller.
+# version: 1.1
+# Author: Brendan Miller, Walter Landry
 # Description: this file makes bash's editing shortucts to be ErgoEmacs keybinding, for BEPO layout.
-# For layout of ErgoEmacs keys, see: http://xahlee.org/emacs/ergonomic_emacs_keybinding.html
+# For layout of ErgoEmacs keys, see: https://ergoemacs.github.io/
 
 # INSTALL
 # to install, rename this file to just ".inputrc"
@@ -16,22 +15,22 @@
 
 set editing-mode emacs
 
-"\eè": backward-char
-"\eo": forward-char
-"\ei": previous-history
-"\eu": next-history
-"\eY": beginning-of-line
-"\eX": end-of-line
-"\e.": backward-word
-"\eR": forward-word
+"\et": backward-char
+"\er": forward-char
+"\ed": previous-history
+"\es": next-history
+"\ec": beginning-of-line
+"\eC": end-of-line
+"\ev": backward-word
+"\el": forward-word
 "\e,": kill-line
 "\ep": backward-kill-word
-"\er": kill-word
-"\ed": backward-delete-char
+"\eo": kill-word
+"\ei": backward-delete-char
 "\ee": delete-char
-"\eÀ": undo
+"\eà": undo
 "\ey": kill-region
-"\ec": copy-region-as-kill
-"\e:": yank
-"\e;": forward-search-history
-"\e:": reverse-search-history
+"\ex": copy-region-as-kill
+"\e.": yank
+"\en": forward-search-history
+"\eN": reverse-search-history

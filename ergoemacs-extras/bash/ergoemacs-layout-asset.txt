@@ -1,8 +1,7 @@
-# date: 2010-06-15
-# version: 1.0
-# Author: Brendan Miller.
+# version: 1.1
+# Author: Brendan Miller, Walter Landry
 # Description: this file makes bash's editing shortucts to be ErgoEmacs keybinding, for ASSET layout.
-# For layout of ErgoEmacs keys, see: http://xahlee.org/emacs/ergonomic_emacs_keybinding.html
+# For layout of ErgoEmacs keys, see: https://ergoemacs.github.io/
 
 # INSTALL
 # to install, rename this file to just ".inputrc"
@@ -16,22 +15,22 @@
 
 set editing-mode emacs
 
-"\ek": backward-char
-"\eO": forward-char
-"\e;": previous-history
-"\eU": next-history
+"\en": backward-char
+"\eo": forward-char
+"\eu": previous-history
+"\ei": next-history
 "\eh": beginning-of-line
 "\eH": end-of-line
-"\eP": backward-word
-"\eL": forward-word
+"\ep": backward-word
+"\el": forward-word
 "\ed": kill-line
 "\ej": backward-kill-word
 "\ef": kill-word
 "\ee": backward-delete-char
-"\eg": delete-char
+"\et": delete-char
 "\ez": undo
 "\ex": kill-region
 "\ec": copy-region-as-kill
 "\ev": yank
-"\e;": forward-search-history
-"\e:": reverse-search-history
+"\er": forward-search-history
+"\eR": reverse-search-history
