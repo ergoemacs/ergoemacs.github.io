@@ -16,22 +16,22 @@
 
 set editing-mode emacs
 
-"\ek": backward-char
-"\eI": forward-char
-"\eU": previous-history
-"\ef": next-history
+"\en": backward-char
+"\ei": forward-char
+"\eu": previous-history
+"\ee": next-history
 "\eh": beginning-of-line
 "\eH": end-of-line
-"\eL": backward-word
-"\ej": forward-word
+"\el": backward-word
+"\ey": forward-word
 "\ed": kill-line
-"\ee": backward-kill-word
+"\ef": backward-kill-word
 "\ep": kill-word
 "\er": backward-delete-char
-"\eg": delete-char
+"\et": delete-char
 "\ez": undo
 "\ex": kill-region
 "\ec": copy-region-as-kill
 "\ev": yank
-"\e;": forward-search-history
-"\e:": reverse-search-history
+"\eo": forward-search-history
+"\eO": reverse-search-history
