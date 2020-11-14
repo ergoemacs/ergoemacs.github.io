@@ -283,14 +283,26 @@ notation.
 <h3 id="sec-7">I want to modify my modifiers to work differently on a mac</h3>
 <div class="outline-text-3" id="text-7">
 
-<p>Ergoemacs-mode uses the option as an alt key because you can press it
-with a thumb.  If you want a different option, set:
+<p>Ergoemacs-mode uses the Option/Alt key as the Meta key by default.
+To use Command as the Alt key and Option as the Super key, set
 </p>
 
-
-
-<pre class="src src-emacs-lisp">(setq ergoemacs-use-mac-command-as-meta nil)
+<pre class="src src-emacs-lisp">(setq ns-command-modifier 'meta)
+(setq ns-alternate-modifier 'super)
 </pre>
+
+See also <a href="https://emacsformacosx.com/tips">here</a> for more
+information about setting modifiers.  Note that this can interfere
+with some global shortcuts.  For example, Ergoemacs-mode uses Meta-SPC
+to set the mark.  However, typing Command-SPC ordinarily brings up
+Spotlight.  To disable this and allow Ergoemacs to use this binding,
+go into
+
+<pre class="src src-emacs-lisp">
+System Preferences -&gt; Keyboard -&gt; Shortcuts -&gt; Spotlight
+</pre>
+
+and disable that binding.
 
 </div>
 </div>
